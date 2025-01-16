@@ -1,0 +1,61 @@
+# Xcode
+DerivedData/
+*.xcworkspace
+*.xccheckout
+*.xcscmblueprint
+
+# Build
+build/
+Build/
+
+# Swift Package Manager
+.swiftpm
+.build/
+Package.resolved
+Packages/
+
+# CocoaPods
+Pods/
+Podfile.lock
+Podfile~
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/*.lock
+
+# Realm
+*.realm
+*.realm.lock
+
+# Xcode Specific
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/xcshareddata/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# SwiftPM binaries
+.xcframeworks/
+
+# Swift Package Index Cache
+.swift-package-index/
+
+# Generated source
+*.gyb
+
+# Miscellaneous
+*.ds_store
+*.swp
+*.swm
+.DS_Store
+*.idea/
