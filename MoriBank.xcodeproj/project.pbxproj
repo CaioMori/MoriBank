@@ -6,13 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		941C3E41B7518738BE3130AC /* Pods_MoriBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EC2C509D4C3A10FE505AB5 /* Pods_MoriBank.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		7EF61BD492A9D77A130594F7 /* Pods-MoriBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoriBank.release.xcconfig"; path = "Target Support Files/Pods-MoriBank/Pods-MoriBank.release.xcconfig"; sourceTree = "<group>"; };
+		C9524ED80E9728161A09BC28 /* Pods-MoriBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoriBank.debug.xcconfig"; path = "Target Support Files/Pods-MoriBank/Pods-MoriBank.debug.xcconfig"; sourceTree = "<group>"; };
+		F7EC2C509D4C3A10FE505AB5 /* Pods_MoriBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoriBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1847632D392C01007342A8 /* MoriBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoriBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FD1847652D392C01007342A8 /* MoriBank */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MoriBank;
 			sourceTree = "<group>";
 		};
@@ -23,17 +32,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941C3E41B7518738BE3130AC /* Pods_MoriBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B01A43F3550545E4542D02B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9524ED80E9728161A09BC28 /* Pods-MoriBank.debug.xcconfig */,
+				7EF61BD492A9D77A130594F7 /* Pods-MoriBank.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		297E90B537EE56BFABC4D568 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7EC2C509D4C3A10FE505AB5 /* Pods_MoriBank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD18475A2D392C01007342A8 = {
 			isa = PBXGroup;
 			children = (
 				FD1847652D392C01007342A8 /* MoriBank */,
 				FD1847642D392C01007342A8 /* Products */,
+				0B01A43F3550545E4542D02B /* Pods */,
+				297E90B537EE56BFABC4D568 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +82,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD1847712D392C02007342A8 /* Build configuration list for PBXNativeTarget "MoriBank" */;
 			buildPhases = (
+				AF6B4B9781E2D98ED5619FEE /* [CP] Check Pods Manifest.lock */,
 				FD18475F2D392C01007342A8 /* Sources */,
 				FD1847602D392C01007342A8 /* Frameworks */,
 				FD1847612D392C01007342A8 /* Resources */,
+				7E2E10F7D2FC159FCC3B89E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -64,8 +96,6 @@
 				FD1847652D392C01007342A8 /* MoriBank */,
 			);
 			name = MoriBank;
-			packageProductDependencies = (
-			);
 			productName = MoriBank;
 			productReference = FD1847632D392C01007342A8 /* MoriBank.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +143,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E2E10F7D2FC159FCC3B89E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoriBank/Pods-MoriBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoriBank/Pods-MoriBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoriBank/Pods-MoriBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF6B4B9781E2D98ED5619FEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoriBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD18475F2D392C01007342A8 /* Sources */ = {
@@ -246,6 +318,7 @@
 		};
 		FD1847722D392C02007342A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9524ED80E9728161A09BC28 /* Pods-MoriBank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -275,6 +348,7 @@
 		};
 		FD1847732D392C02007342A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EF61BD492A9D77A130594F7 /* Pods-MoriBank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
