@@ -4,6 +4,6 @@
 target 'MoriBank' do
   use_frameworks!
 
-  pod 'MBLoan', :git => 'https://github.com/CaioMori/MBLoan.git', :tag => '0.1.6'
+  pod 'MBLoan', :git => 'https://github.com/CaioMori/MBLoan.git', :tag => '0.1.8'
 
 end
