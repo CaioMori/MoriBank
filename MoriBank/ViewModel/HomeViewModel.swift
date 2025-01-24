@@ -12,6 +12,7 @@ class HomeViewModel: ObservableObject {
     // MARK: - Attributes
     
     private let service: HomeServiceable
+    @Published var screenModel: HomeModel?
 
     // MARK: - Initialize
     
@@ -21,12 +22,12 @@ class HomeViewModel: ObservableObject {
     
     // MARK: - API Calls
     
-    func getHome() async throws -> HomeModel? {
+    func getHome() async throws {
         let result = try await service.getHome()
         
         switch result {
         case .success(let response):
-            return response
+            self.screenModel = response
         case .failure(let error):
             throw error
         }

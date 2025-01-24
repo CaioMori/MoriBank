@@ -19,7 +19,7 @@ extension HTTPClient {
         urlComponents.path = endpoint.path
         urlComponents.port = 3000
         
-        let apiaryURL = URL(string: "https://private-93129-swiftbank.apiary-mock.com/home")
+        let apiaryURL = URL(string: "https://private-70c33e-moribank.apiary-mock.com/home")
         
         guard let url = apiaryURL else {
             return .failure(.invalidURL)

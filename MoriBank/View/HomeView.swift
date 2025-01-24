@@ -71,10 +71,20 @@ struct HomeView: View {
                 }
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarLeading) {
-                        Text("Olá,")
-                            .font(.system(size: 24))
-                            .foregroundColor(.white)
-                            .fontWeight(.light)
+                        if let screenModel = viewModel.screenModel {
+                            Text("Olá, \(screenModel.header.title.text)")
+                                .font(
+                                    .system(
+                                        size: CGFloat(
+                                            screenModel.header.title.fontSize
+                                        )
+                                    )
+                                )
+                                .foregroundColor(
+                                    Color(screenModel.header.title.color)
+                                )
+                                .fontWeight(.light)
+                        }
                                         
                     }
                                     
@@ -83,6 +93,11 @@ struct HomeView: View {
                             .foregroundStyle(Color.red, Color.black)
                     }
                 }
+            }
+        }
+        .onAppear {
+            Task {
+                try await viewModel.getHome()
             }
         }
     }

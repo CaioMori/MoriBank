@@ -17,13 +17,3 @@ struct HomeNetworkingService: HTTPClient, HomeServiceable {
         return await sendRequest(endpoint: HomeEndpoint.get, responseModel: HomeModel.self)
     }
 }
-
-
-class HomeModel: NSObject, Codable {
-    
-    private(set) var header: Header
-    
-    struct Header: Codable {
-        var title: String
-    }
-}
